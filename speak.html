@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: pink;
+
+        }
+
+        #btn {
+            border: 2px solid purple;
+            border-radius: 20px;
+            color: rosybrown;
+            font-size: 30px;
+            font-family: cursive;
+            padding: 20px 40px;
+            position: relative;
+            left: 00px;
+            top: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <textarea name="" id="name"
+        style="display: none;">oy potti what are you doing. what i said read it, i will ask the questions related to that, if you don't tell the answer, then you should buy me sweet</textarea>
+    <button id="btn">Click on me</button>
+
+
+
+
+
+
+    <script>
+        let text = document.getElementById("name");
+
+        let btn = document.getElementById("btn");
+        btn.addEventListener('click', () => {
+            lio(text.value);
+        })
+
+        function lio(max) {
+            let speech = new SpeechSynthesisUtterance(max);
+
+            speechSynthesis.speak(speech)
+        }
+    </script>
+
+</body>
+
+</html>
